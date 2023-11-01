@@ -1,4 +1,8 @@
 import React from "react";
+import Profile from "./Profile";
+import Education from "./Education";
+import Skills from "./Skills";
+import Experience from "./Experience";
 
 const HomePage = () => {
   return (
@@ -10,7 +14,7 @@ const HomePage = () => {
         <div className=" flex-1 bg-white p-8">
           <div className=" p-4 rounded border border-black ">
             <h2 className="text-2xl font-semibold">Page 1</h2>
-                {/* Content here */}
+                <Profile />
             
           </div>
         </div>
