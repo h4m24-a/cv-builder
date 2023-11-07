@@ -78,7 +78,6 @@ function App() {
         {/* Right Page */}
         <div className=" flex-1 bg-white p-8">
           <div className=" p-4 rounded border border-black">
-            <h2 className="text-2xl font-semibold"> CV Preview</h2>
             <CVPreview 
              fullName={fullName}
              email={email}
