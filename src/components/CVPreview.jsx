@@ -1,15 +1,13 @@
-import React from 'react'
+import React from "react";
 
-const CVPreview = (props) => {
+const CVPreview = ({ fullName, email, number }) => {
   return (
     <>
-
-     <h1>{props.fullName}</h1>
-     <h1>{props.email}</h1>
-     <h1>{props.number}</h1>
-
+      <h1>{fullName}</h1>
+      <h1>{email}</h1>
+      <h1>{number}</h1>
     </>
-  )
-}
+  );
+};
 
-export default CVPreview
+export default CVPreview;
