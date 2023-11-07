@@ -2,8 +2,7 @@ import React from "react"
 import { useState } from "react"
 import Profile from "./components/Profile"
 import CVPreview from "./components/CVPreview"
-// import Education from "./components/Education"
-// import Skills from "./components/Skills"
+import Education from "./components/Education"
 // import Experience from "./components/Experience"
 
 function App() {
@@ -18,12 +17,17 @@ function App() {
   const [number, setNumber] = useState("")
 
 
-
-  const [education, setEducation] = useState("")
+  // Education
+  const [schoolName, setSchoolName] = useState("")
+  const [degree, setDegree] = useState("")
+  const [startdate, setStartDate] = useState("")
+  const [endDate, setEndDate] = useState("")
 
   
-  const [experience, setExperience] = useState("")
+  // Experience
   
+
+
   return (
     <>
     <main>
@@ -50,6 +54,20 @@ function App() {
             setNumber={setNumber}
             />
             
+
+            <Education 
+            schoolName={schoolName}
+            setSchoolName={setSchoolName}
+
+            degree={degree}
+            setDegree={setDegree}
+
+            startdate={startdate}
+            setStartDate={setStartDate}
+
+            endDate={endDate}
+            setEndDate={setEndDate}
+            />
             
           </div>
         </div>
@@ -65,6 +83,11 @@ function App() {
              fullName={fullName}
              email={email}
              number={number}
+
+             schoolName={schoolName}
+             degree={degree}
+             startDate={startdate}
+             endDate={endDate}
             />
           </div>
         </div>
