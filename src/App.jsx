@@ -20,8 +20,10 @@ function App() {
   // Education
   const [schoolName, setSchoolName] = useState("University of London")
   const [degree, setDegree] = useState("Computer Science")
-  const [startDate, setStartDate] = useState("September 2023")
+  const [startDate, setStartDate] = useState("Sept. 2023")
   const [endDate, setEndDate] = useState("July 2025")
+
+  const fullDate = startDate + " - " + endDate
 
   
   // Experience
@@ -85,8 +87,8 @@ function App() {
 
              schoolName={schoolName}
              degree={degree}
-             startDate={startDate}
-             endDate={endDate}
+             fullDate={fullDate}
+    
             />
           </div>
         </div>
