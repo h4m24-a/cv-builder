@@ -8,8 +8,13 @@ const CVPreview = ({
   number,
   schoolName,
   degree,
-  fullDate
+  fullDate,
+  company,
+  position,
+  description,
+  fullJobDate
 }) => {
+
 
   return (
     <>
@@ -39,6 +44,16 @@ const CVPreview = ({
       <h1 className="mt-5 text-xl font-bold border-b-2 border-black">
         Experience
       </h1>
+
+
+      <div>
+        <div className="flex flex-wrap">
+          <h2 className="font-poppins w-full sm:w-1/2 md:w-1/4">{position}</h2>
+          <h2 className="font-poppins w-full sm:w-1/2 md:w-1/4">{fullJobDate}</h2>
+        </div>
+      <h2 className="font-poppins italic mt-2">{company}</h2>
+      <h2 className="font-poppins mt-4">{description}</h2>
+      </div>
     </>
   );
 };
