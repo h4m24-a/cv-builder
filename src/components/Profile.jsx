@@ -3,7 +3,7 @@ import React from "react";
 
 
 // eslint-disable-next-line react/prop-types
-export default function Profile ({setFirstName, firstName, setLastName, LastName, setEmail, email, setNumber, number}) {
+export default function Profile ({setFirstName, firstName, setLastName, lastName, setEmail, email, setNumber, number}) {
   
 
   const handleSumbit = (e) => {
@@ -37,7 +37,7 @@ export default function Profile ({setFirstName, firstName, setLastName, LastName
 
           <input
             onChange={(e) => setLastName(e.target.value)}
-            value={LastName}
+            value={lastName}
             name="lastName"
             id="lastName"
             type={"text"}

@@ -8,20 +8,20 @@ import Education from "./components/Education"
 function App() {
 
   // Profile
-  const [firstName, setFirstName] = useState("")
-  const [lastName, setLastName] = useState("")
+  const [firstName, setFirstName] = useState("John")
+  const [lastName, setlastName] = useState("Doe");
 
   const fullName = firstName + " " + lastName
 
-  const [email, setEmail] = useState("")
-  const [number, setNumber] = useState("")
+  const [email, setEmail] = useState("johndoe@gmail.com")
+  const [number, setNumber] = useState("0123456789")
 
 
   // Education
-  const [schoolName, setSchoolName] = useState("")
-  const [degree, setDegree] = useState("")
-  const [startdate, setStartDate] = useState("")
-  const [endDate, setEndDate] = useState("")
+  const [schoolName, setSchoolName] = useState("University of London")
+  const [degree, setDegree] = useState("Computer Science")
+  const [startDate, setStartDate] = useState("September 2023")
+  const [endDate, setEndDate] = useState("July 2025")
 
   
   // Experience
@@ -38,14 +38,14 @@ function App() {
       <div className="h-screen sm: flex flex-col md:flex-row ">
 
         {/* Left Page */}
-        <div className=" flex-1 bg-white p-8">
+        <div id="editor" className=" flex-1 bg-white p-8">
           <div className=" p-4 rounded border border-black ">
             <Profile 
             firstName={firstName}
             setFirstName={setFirstName}
 
             lastName={lastName}
-            setLastName={setLastName}
+            setlastName={setlastName}
 
             email={email}
             setEmail={setEmail}
@@ -62,7 +62,7 @@ function App() {
             degree={degree}
             setDegree={setDegree}
 
-            startdate={startdate}
+            startDate={startDate}
             setStartDate={setStartDate}
 
             endDate={endDate}
@@ -76,7 +76,7 @@ function App() {
 
 
         {/* Right Page */}
-        <div className=" flex-1 bg-white p-8">
+        <div id="cvPreview" className=" flex-1 bg-white p-8">
           <div className=" p-4 rounded border border-black">
             <CVPreview 
              fullName={fullName}
@@ -85,7 +85,7 @@ function App() {
 
              schoolName={schoolName}
              degree={degree}
-             startDate={startdate}
+             startDate={startDate}
              endDate={endDate}
             />
           </div>
