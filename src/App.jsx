@@ -28,7 +28,7 @@ function App() {
   const [position, setPosition] = useState("Senior Software Developer");
   const [jobStart, setJobStart] = useState("Feb. 2022");
   const [jobEnd, setJobEnd] = useState("Sep. 2023");
-  const [description, setDescription] = useState("");
+  const [description, setDescriptions] = useState([]);
 
   const fullJobDate = jobStart + " - " + jobEnd;
 
@@ -75,7 +75,7 @@ function App() {
                 jobEnd={jobEnd}
                 setJobEnd={setJobEnd}
                 description={description}
-                setDescription={setDescription}
+                setDescriptions={setDescriptions}
               />
             </div>
           </div>
