@@ -15,6 +15,8 @@ function App() {
   const [email, setEmail] = useState("johndoe@gmail.com");
   const [number, setNumber] = useState("0123456789");
 
+  const [summary, setSummary] = useState("Seasoned senior developer with 5 years experience in full-stack web development. Proficient in JavaScript (Node.js, React, Vue.js), Python (Django), and PHP (Laravel). Strong database skills with MySQL and MongoDB. Expertise in Git and deploying on AWS. Proven track record leading teams to deliver high-quality solutions on time")
+
   // Education
   const [schoolName, setSchoolName] = useState("University of London");
   const [degree, setDegree] = useState("Computer Science");
@@ -25,7 +27,7 @@ function App() {
 
   // Experience
   const [company, setCompany] = useState("Web Agency");
-  const [position, setPosition] = useState("Senior Software Developer");
+  const [position, setPosition] = useState("Junior Software Developer");
   const [jobStart, setJobStart] = useState("Feb. 2023");
   const [jobEnd, setJobEnd] = useState("Present");
   const [description, setDescriptions] = useState([
@@ -46,7 +48,7 @@ function App() {
         <div className="h-screen sm: flex flex-col md:flex-row ">
           {/* Left Page */}
           <div id="editor" className=" flex-1 bg-white p-8">
-            <div className="rounded border border-black ">
+            <div className=" p-1 rounded border border-black ">
               <Profile
                 firstName={firstName}
                 setFirstName={setFirstName}
@@ -56,6 +58,8 @@ function App() {
                 setEmail={setEmail}
                 number={number}
                 setNumber={setNumber}
+                summary={summary}
+                setSummary={setSummary}
               />
 
               <Education
@@ -91,6 +95,7 @@ function App() {
                 fullName={fullName}
                 email={email}
                 number={number}
+                summary={summary}
                 schoolName={schoolName}
                 degree={degree}
                 fullDate={fullDate}

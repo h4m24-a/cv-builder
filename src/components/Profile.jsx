@@ -3,7 +3,7 @@ import React from "react";
 
 
 // eslint-disable-next-line react/prop-types
-export default function Profile ({setFirstName, firstName, setLastName, lastName, setEmail, email, setNumber, number}) {
+export default function Profile ({setFirstName, firstName, setLastName, lastName, setEmail, email, setNumber, number, setSummary, summary}) {
   
 
   const handleSumbit = (e) => {
@@ -65,20 +65,27 @@ export default function Profile ({setFirstName, firstName, setLastName, lastName
             name="number"
             id="number"
             type={"number"}
-            className=" rounded-md border-0 mb-8 py-2 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+            className=" rounded-md border-0  py-2 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
           />
 
-          {/* <div className="text-center">
-            <button type="submit" className="mb-5 bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600"
-            >Submit
-            </button>
-          </div> */}
+          <label
+            htmlFor="summary" className="flex justify-center  pt-3 text-md font-medium leading-6 text-gray-900">Summary</label>
+
+          <textarea
+            onChange={(e) => setSummary(e.target.value)}
+            value={summary}
+            name="summary"
+            id="summary"
+            type={"text"}
+            className=" rounded-md border-0 mb-8 py-2 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+          />
 
         </form>
       </div>
     </>
   );
 }
+
 
 
 

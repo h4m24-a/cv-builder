@@ -5,6 +5,7 @@ const CVPreview = ({
   fullName,
   email,
   number,
+  summary,
   schoolName,
   degree,
   fullDate,
@@ -24,6 +25,7 @@ const CVPreview = ({
           <p className="text-md">{email}</p>
           <p className="text-md">{number}</p>
         </div>
+        <p className="font-poppins text-sm pt-3">{summary}</p>
       </div>
 
       <h1 className="mt-5 text-2xl font-bold border-b-2 border-black">Education</h1>
@@ -33,7 +35,7 @@ const CVPreview = ({
           <h2 className="font-poppins">{schoolName}</h2>
           <h2 className="font-poppins justify-end">{fullDate}</h2>
         </div>
-      <h2 className="font-poppins italic">{degree}</h2>
+      <h2 className="font-poppins italic text-gray-800">{degree}</h2>
       </div>
 
       <h1 className="mt-5 text-2xl font-bold border-b-2 border-black">Experience</h1>
@@ -41,9 +43,9 @@ const CVPreview = ({
       <div>
 
         <div className="flex flex-col"> 
-          <h2 className="font-poppins ">{company}</h2>
+          <h2 className="font-poppins font-semibold pt-1 ">{company}</h2>
           <div className="flex justify-between">
-            <h2 className="font-poppins italic text-gray-600">{position}</h2>
+            <h2 className="font-poppins italic text-gray-800">{position}</h2>
             <h2 className="font-poppins">{fullJobDate}</h2>
           </div>
         </div>
