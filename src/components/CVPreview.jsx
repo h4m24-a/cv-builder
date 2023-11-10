@@ -16,7 +16,7 @@ const CVPreview = ({
   return (
     <>
       <div>
-        <h1 className=" text-3xl text-center font-bold font-cambo">
+        <h1 className=" text-4xl text-center font-bold font-cambo">
           {fullName}
         </h1>
 
@@ -26,33 +26,33 @@ const CVPreview = ({
         </div>
       </div>
 
-      <h1 className="mt-5 text-xl font-bold border-b-2 border-black">
-        Education
-      </h1>
+      <h1 className="mt-5 text-2xl font-bold border-b-2 border-black">Education</h1>
 
-      <div className="flex flex-wrap gap-x-10 gap-y-1 pt-1">
-        <h2 className="font-poppins">{schoolName}</h2>
-        <h2 className="font-poppins">{fullDate}</h2>
-        <h2 className="font-poppins italic">{degree}</h2>
+      <div className="flex flex-col">
+        <div className="flex justify-between pt-1">
+          <h2 className="font-poppins">{schoolName}</h2>
+          <h2 className="font-poppins justify-end">{fullDate}</h2>
+        </div>
+      <h2 className="font-poppins italic">{degree}</h2>
       </div>
 
-      <h1 className="mt-5 text-xl font-bold border-b-2 border-black">
-        Experience
-      </h1>
+      <h1 className="mt-5 text-2xl font-bold border-b-2 border-black">Experience</h1>
 
       <div>
 
-        <div className="flex flex-wrap">
-          <h2 className="font-poppins w-full sm:w-1/2 md:w-1/4">{position}</h2>
-          <h2 className="font-poppins w-full sm:w-1/2 md:w-1/4">{fullJobDate}</h2>
+        <div className="flex flex-col"> 
+          <h2 className="font-poppins ">{company}</h2>
+          <div className="flex justify-between">
+            <h2 className="font-poppins italic text-gray-600">{position}</h2>
+            <h2 className="font-poppins">{fullJobDate}</h2>
+          </div>
         </div>
 
-        <h2 className="font-poppins italic mt-2">{company}</h2>
 
         <h2 className="font-poppins mt-4">
           <ul className="pl-5">
             {description.map((descriptions, index) => (
-              <li className="list-disc" key={index}>
+              <li className="list-disc pb-2" key={index}>
                 {descriptions}
               </li>
             ))}

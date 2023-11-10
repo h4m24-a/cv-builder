@@ -26,9 +26,13 @@ function App() {
   // Experience
   const [company, setCompany] = useState("Web Agency");
   const [position, setPosition] = useState("Senior Software Developer");
-  const [jobStart, setJobStart] = useState("Feb. 2022");
-  const [jobEnd, setJobEnd] = useState("Sep. 2023");
-  const [description, setDescriptions] = useState([]);
+  const [jobStart, setJobStart] = useState("Feb. 2023");
+  const [jobEnd, setJobEnd] = useState("Present");
+  const [description, setDescriptions] = useState([
+    "Led a team of five developers, implementing agile methodologies and ensuring on-time project delivery.",
+    "Worked closely with product management and UX/UI teams to integrate frontend and backend components seamlessly.",
+    "Provided mentorship to junior developers, fostering a culture of continuous learning and improvement."
+  ]);
 
   const fullJobDate = jobStart + " - " + jobEnd;
 
@@ -42,7 +46,7 @@ function App() {
         <div className="h-screen sm: flex flex-col md:flex-row ">
           {/* Left Page */}
           <div id="editor" className=" flex-1 bg-white p-8">
-            <div className=" p-4 rounded border border-black ">
+            <div className="rounded border border-black ">
               <Profile
                 firstName={firstName}
                 setFirstName={setFirstName}
