@@ -45,7 +45,7 @@ function App() {
           CV Builder
         </h1>
 
-        <div className="h-screen sm: flex flex-col md:flex-row ">
+        <div className="h-screen sm: flex flex-col lg:flex-row ">
           {/* Left Page */}
           <div id="editor" className=" flex-1 bg-white p-8">
             <div className=" p-1 rounded border border-black ">

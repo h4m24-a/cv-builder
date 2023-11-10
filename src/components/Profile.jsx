@@ -18,9 +18,9 @@ export default function Profile ({setFirstName, firstName, setLastName, lastName
         Profile
       </h1>
 
-      <div className="flex justify-center">
+      <div className="flex justify-center md:flex flex-wrap">
 
-        <form onSubmit={handleSumbit}>
+        <form onSubmit={handleSumbit} className="">
           <label htmlFor="firstName" className="flex justify-center pt-3 text-md font-medium leading-6 text-gray-900"> First Name</label>
 
           <input
