@@ -23,7 +23,7 @@ const Experience = ({ setCompany, company, setPosition, position, setJobStart, j
 
   return (
     <>
-      <h1 className='font-sans text-xl font-extrabold bg-slate-200 rounded p-2 text-center'>Experience</h1>
+      <h1 className='font-sans text-xl font-extrabold bg-slate-200 rounded p-2 mt-5 text-center'>Experience</h1>
 
       <div className="flex justify-center">
       <form onSubmit={handleSumbit}>
@@ -83,7 +83,7 @@ const Experience = ({ setCompany, company, setPosition, position, setJobStart, j
             name="description"
             id="description"
             placeholder="Enter description"
-            className="rounded-md border-0 py-2 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 h-32"/>
+            className="rounded-md border-0 py-2 pl-7 pr-28 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 h-32"/>
 
           <div className="flex justify-center pt-3">
             <button type="button" onClick={handleNewDesc} className="flex flex- rounded border border-indigo-600 bg-indigo-600 px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-indigo-600 focus:outline-none focus:ring active:text-indigo-500">
