@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from "react";
-import InputField from "./InputField"; // Adjust the import path based on your file structure
+import InputField from "./InputField";
 
 export default function Profile({
   setFirstName,
