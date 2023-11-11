@@ -1,16 +1,22 @@
+/* eslint-disable react/prop-types */
 import React from "react";
-// import { useState } from "react";
+import InputField from "./InputField"; // Adjust the import path based on your file structure
 
-
-// eslint-disable-next-line react/prop-types
-export default function Profile ({setFirstName, firstName, setLastName, lastName, setEmail, email, setNumber, number, setSummary, summary}) {
-  
-
+export default function Profile({
+  setFirstName,
+  firstName,
+  setLastName,
+  lastName,
+  setEmail,
+  email,
+  setNumber,
+  number,
+  setSummary,
+  summary,
+}) {
   const handleSumbit = (e) => {
     e.preventDefault();
   };
-
-
 
   return (
     <>
@@ -18,56 +24,43 @@ export default function Profile ({setFirstName, firstName, setLastName, lastName
         Profile
       </h1>
 
-      <div className="flex justify-center md:flex flex-wrap">
-
-        <form onSubmit={handleSumbit} className="">
-          <label htmlFor="firstName" className="flex justify-center pt-3 text-md font-medium leading-6 text-gray-900"> First Name</label>
-
-          <input
-            onChange={(e) => setFirstName(e.target.value)}
-            value={firstName}
-            name="firstName"
+      <div className="flex justify-center">
+        <form onSubmit={handleSumbit} className="flex flex-wrap justify-center">
+          <InputField
+            label="First Name"
             id="firstName"
-            type={"text"}
-            className="rounded-md border-0 py-2 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+            value={firstName}
+            onChange={(e) => setFirstName(e.target.value)}
+            type="text"
           />
-
-          <label
-            htmlFor="lastName" className="flex justify-center  pt-3 text-md font-medium leading-6 text-gray-900">Last Name</label>
-
-          <input
-            onChange={(e) => setLastName(e.target.value)}
-            value={lastName}
-            name="lastName"
+          <InputField
+            label="Last Name"
             id="lastName"
-            type={"text"}
-            className=" rounded-md border-0 py-2 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+            value={lastName}
+            onChange={(e) => setLastName(e.target.value)}
+            type="text"
           />
 
-          <label
-            htmlFor="email" className="flex justify-center  pt-3 text-md font-medium leading-6 text-gray-900">Email</label>
-
-          <input
-            onChange={(e) => setEmail(e.target.value)}
-            value={email}
-            name="email"
+          <div className="md:flex w-full justify-center">
+          <InputField
+            label="Email"
             id="email"
-            type={"text"}
-            className="rounded-md border-0 py-2 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            type="text"
           />
-
-          <label
-            htmlFor="number" className="flex justify-center  pt-3 text-md font-medium leading-6 text-gray-900">Number</label>
-
-          <input
-            onChange={(e) => setNumber(e.target.value)}
-            value={number}
-            name="number"
+          <InputField
+            label="Number"
             id="number"
-            type={"number"}
-            className=" rounded-md border-0  py-2 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+            value={number}
+            onChange={(e) => setNumber(e.target.value)}
+            type="number"
           />
+          </div>
+         
 
+
+          <div className="w-full px-4">
           <label
             htmlFor="summary" className="flex justify-center  pt-3 text-md font-medium leading-6 text-gray-900">Summary</label>
 
@@ -78,33 +71,10 @@ export default function Profile ({setFirstName, firstName, setLastName, lastName
             id="summary"
             type={"text"}
             className="rounded-md border-0 p-2  text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 h-32 w-full"/>
-
+          </div>
 
         </form>
       </div>
     </>
   );
 }
-
-
-
-
-
-
-  // const [profileForm, setProfileForm] = useState({
-  //   fullname: "",
-  //   email: "",
-  //   number: "",
-  // });
-
-  // const handleSumbit = (e) => {
-  //   e.preventDefault();
-  // };
-
-  // const handleInputChange = (e) => {
-  //   const { name, value } = e.target;
-  //   setProfileForm((prevProfileFormData) => ({
-  //     ...prevProfileFormData,
-  //     [name]: value,
-  //   }));
-  // };
