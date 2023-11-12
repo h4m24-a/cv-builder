@@ -48,7 +48,7 @@ function App() {
         <div className="h-screen sm: flex flex-col lg:flex-row ">
           {/* Left Page */}
           <div id="editor" className=" flex-1 bg-white p-8">
-            <div className=" p-1 rounded border border-black ">
+            <div className="shadow-2xl p-1  rounded-md border border-black ">
               <Profile
                 firstName={firstName}
                 setFirstName={setFirstName}
@@ -89,8 +89,8 @@ function App() {
           </div>
 
           {/* Right Page */}
-          <div id="cvPreview" className=" flex-1 bg-white p-8">
-            <div className=" p-4 rounded border border-black">
+          <div id="cvPreview" className=" flex-1  bg-white p-8">
+            <div className="shadow-2xl p-4 rounded-md border border-black">
               <CVPreview
                 fullName={fullName}
                 email={email}

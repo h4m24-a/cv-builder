@@ -20,7 +20,7 @@ export default function Profile({
 
   return (
     <>
-      <h1 className="font-sans text-xl font-extrabold bg-slate-200 rounded p-2 text-center">
+      <h1 className=" font-roboto text-2xl font-extrabold bg-blue-300 rounded p-2 mx-auto text-center">
         Profile
       </h1>
 

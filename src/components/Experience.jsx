@@ -24,7 +24,7 @@ const Experience = ({ setCompany, company, setPosition, position, setJobStart, j
 
   return (
     <>
-      <h1 className='font-sans text-xl font-extrabold bg-slate-200 rounded p-2 mt-5 text-center'>Experience</h1>
+      <h1 className='font-roboto text-2xl font-extrabold bg-blue-300 rounded p-2 mt-5 text-center'>Experience</h1>
 
       <div className="flex justify-center">
         <form onSubmit={handleSumbit} className="flex flex-wrap justify-center">

@@ -4,7 +4,8 @@ export default {
   theme: {
     fontFamily: {
       poppins: ["Poppins", 'sans-serif'],
-      cambo: ['Cambo', 'serif']
+      cambo: ['Cambo', 'serif'],
+      roboto: ['Roboto', 'sans-serif']
     },
     extend: {},
   },
