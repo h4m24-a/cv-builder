@@ -11,6 +11,8 @@ export default function Profile({
   email,
   setNumber,
   number,
+  link,
+  setLink,
   setSummary,
   summary,
 }) {
@@ -20,7 +22,7 @@ export default function Profile({
 
   return (
     <>
-      <h1 className=" font-roboto text-2xl font-extrabold bg-blue-300 rounded p-2 mx-auto text-center">
+      <h1 className=" font-roboto text-xl font-extrabold bg-blue-300 rounded p-2 mx-auto text-center">
         Profile
       </h1>
 
@@ -55,6 +57,13 @@ export default function Profile({
             value={number}
             onChange={(e) => setNumber(e.target.value)}
             type="number"
+          />
+          <InputField
+            label="Link"
+            id="link"
+            value={link}
+            onChange={(e) => setLink(e.target.value)}
+            type="text"
           />
           </div>
          

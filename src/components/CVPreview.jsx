@@ -5,6 +5,7 @@ const CVPreview = ({
   fullName,
   email,
   number,
+  link,
   summary,
   schoolName,
   degree,
@@ -24,6 +25,7 @@ const CVPreview = ({
         <div className="flex justify-center gap-3 mt-1">
           <p className="text-md">{email}</p>
           <p className="text-md">{number}</p>
+          <p className="text-md">{link}</p>
         </div>
         <p className="font-poppins text-sm pt-3">{summary}</p>
       </div>

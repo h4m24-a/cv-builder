@@ -24,7 +24,7 @@ const Experience = ({ setCompany, company, setPosition, position, setJobStart, j
 
   return (
     <>
-      <h1 className='font-roboto text-2xl font-extrabold bg-blue-300 rounded p-2 mt-5 text-center'>Experience</h1>
+      <h1 className='font-roboto text-xl font-extrabold bg-blue-300 rounded p-2 mt-5 text-center'>Experience</h1>
 
       <div className="flex justify-center">
         <form onSubmit={handleSumbit} className="flex flex-wrap justify-center">
@@ -82,7 +82,7 @@ const Experience = ({ setCompany, company, setPosition, position, setJobStart, j
               className=" mx-ai rounded-md border-0 py-2 pl-7 pr-28 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 h-32"/>
           </div>
 
-          <div className="flex justify-center pt-3">
+          <div className="flex justify-center pt-3 pb-3">
             <button
               type="button"
               onClick={handleNewDesc}

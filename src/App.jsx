@@ -9,12 +9,10 @@ function App() {
   // Profile
   const [firstName, setFirstName] = useState("John");
   const [lastName, setlastName] = useState("Doe");
-
   const fullName = firstName + " " + lastName;
-
   const [email, setEmail] = useState("johndoe@gmail.com");
   const [number, setNumber] = useState("0123456789");
-
+  const [link, setLink] = useState("portfolio.com")
   const [summary, setSummary] = useState("Seasoned senior developer with 5 years experience in full-stack web development. Proficient in JavaScript (Node.js, React, Vue.js), Python (Django), and PHP (Laravel). Strong database skills with MySQL and MongoDB. Expertise in Git and deploying on AWS. Proven track record leading teams to deliver high-quality solutions on time")
 
   // Education
@@ -41,7 +39,7 @@ function App() {
   return (
     <>
       <main>
-        <h1 className=" bg-black text-white text-4xl font-bold font-mono text-center p-4">
+        <h1 className=" bg-black text-white text-4xl font-bold font-mono text-center p-3">
           CV Builder
         </h1>
 
@@ -58,6 +56,8 @@ function App() {
                 setEmail={setEmail}
                 number={number}
                 setNumber={setNumber}
+                link={link}
+                setLink={setLink}
                 summary={summary}
                 setSummary={setSummary}
               />
@@ -103,6 +103,7 @@ function App() {
                 company={company}
                 description={description}
                 fullJobDate={fullJobDate}
+                link={link}
               />
             </div>
           </div>
