@@ -22,9 +22,9 @@ const CVPreview = ({
           {fullName}
         </h1>
 
-        <div className="flex justify-center gap-3 mt-1">
-          <p className="text-md">{email}</p>
+        <div className="flex justify-center  gap-6 mt-1">
           <p className="text-md">{number}</p>
+          <p className="text-center text-md">{email}</p>
           <p className="text-md">{link}</p>
         </div>
         <p className="font-poppins text-sm pt-3">{summary}</p>
@@ -44,7 +44,7 @@ const CVPreview = ({
 
       <div>
 
-        <div className="flex flex-col"> 
+        <div className="flex flex-col">
           <h2 className="font-poppins font-semibold pt-1 ">{company}</h2>
           <div className="flex justify-between">
             <h2 className="font-poppins italic text-gray-800">{position}</h2>
@@ -62,7 +62,7 @@ const CVPreview = ({
             ))}
           </ul>
         </h2>
-        
+
       </div>
     </>
   );

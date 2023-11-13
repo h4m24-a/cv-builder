@@ -22,7 +22,7 @@ export default function Profile({
 
   return (
     <>
-      <h1 className=" font-roboto text-xl font-extrabold bg-blue-300 rounded p-2 mx-auto text-center">
+     <h1 className="font-roboto text-xl font-extrabold border border-sky-700 rounded p-2 mt-2 mx-2 text-center">
         Profile
       </h1>
 

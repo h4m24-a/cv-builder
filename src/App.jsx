@@ -46,7 +46,7 @@ function App() {
         <div className="h-screen sm: flex flex-col lg:flex-row ">
           {/* Left Page */}
           <div id="editor" className=" flex-1 bg-white p-8">
-            <div className="shadow-2xl p-1  rounded-md border border-black ">
+            <div className="shadow-2xl  rounded-md border border-black ">
               <Profile
                 firstName={firstName}
                 setFirstName={setFirstName}
