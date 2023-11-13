@@ -22,7 +22,7 @@ const CVPreview = ({
           {fullName}
         </h1>
 
-        <div className="flex justify-center gap-8 mt-3">
+        <div className="flex justify-center flex-col gap-3 mt-3 md:flex-row">
           <div className="flex items-center gap-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -86,7 +86,7 @@ const CVPreview = ({
       </h1>
 
       <div className="flex flex-col">
-        <div className="flex justify-between pt-1">
+        <div className="flex flex-wrap justify-between pt-1 md:flex">
           <h2 className="font-poppins">{schoolName}</h2>
           <h2 className="font-poppins justify-end">{fullDate}</h2>
         </div>

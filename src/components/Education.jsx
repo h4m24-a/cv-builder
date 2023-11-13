@@ -19,7 +19,7 @@ const Education = ({
 
   return (
     <>
-      <h1 className="font-roboto text-xl font-extrabold border border-sky-700 rounded p-2 mt-2 mx-2 text-center">
+      <h1 className="font-roboto text-xl font-extrabold bg-sky-200 rounded p-2 mt-5 text-center">
         Education
       </h1>
 

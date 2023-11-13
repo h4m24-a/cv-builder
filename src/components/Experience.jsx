@@ -24,7 +24,7 @@ const Experience = ({ setCompany, company, setPosition, position, setJobStart, j
 
   return (
     <>
-      <h1 className="font-roboto text-xl font-extrabold border border-sky-700 rounded p-2 mt-4 mx-2 text-center">
+      <h1 className="font-roboto text-xl font-extrabold bg-yellow-200 rounded p-2 mt-6  text-center">
       Experience
       </h1>
 
