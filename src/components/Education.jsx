@@ -12,12 +12,12 @@ const Education = ({education, setEducation}) => {
   };
 
 
-const handleInputValue = (index, field, value) => {
-    setEducation((prevState) => {
-      const updatedState = [...prevState];
-      updatedState[index][field] = value;
-      return updatedState;
-    });
+  const handleInputValue = (index, field, value) => {
+    setEducation(prevState => [
+      ...prevState.slice(0, index),
+      { ...prevState[index], [field]: value },
+      ...prevState.slice(index + 1)
+    ]);
   };
 
   return (
