@@ -16,12 +16,24 @@ function App() {
   const [summary, setSummary] = useState("Seasoned senior developer with 5 years experience in full-stack web development. Proficient in JavaScript (Node.js, React, Vue.js), Python (Django), and PHP (Laravel). Strong database skills with MySQL and MongoDB. Expertise in Git and deploying on AWS. Proven track record leading teams to deliver high-quality solutions on time")
 
   // Education
-  const [schoolName, setSchoolName] = useState("University of London");
-  const [degree, setDegree] = useState("Computer Science");
-  const [startDate, setStartDate] = useState("Sept. 2023");
-  const [endDate, setEndDate] = useState("July 2025");
+  const [education, setEducation] = useState([ 
+    {
+      id:1,
+      schoolName: "University of London",
+      degree: "BSc Computer Science",
+      startDate: "Sept. 2010",
+      endDate: "July 2013",
+    },
+    {
+      id:2,
+      schoolName: "University of London",
+      degree: "MSc Computer Science",
+      startDate: "Sept. 2013",
+      endDate: "July 2014",
+    }
 
-  const fullDate = startDate + " - " + endDate;
+  ])
+
 
   // Experience
   const [company, setCompany] = useState("Web Agency");
@@ -34,7 +46,7 @@ function App() {
     "Provided mentorship to junior developers, fostering a culture of continuous learning and improvement."
   ]);
 
-  const fullJobDate = jobStart + " - " + jobEnd;
+
 
   return (
     <>
@@ -63,14 +75,8 @@ function App() {
               />
 
               <Education
-                schoolName={schoolName}
-                setSchoolName={setSchoolName}
-                degree={degree}
-                setDegree={setDegree}
-                startDate={startDate}
-                setStartDate={setStartDate}
-                endDate={endDate}
-                setEndDate={setEndDate}
+              education={education}
+              setEducation={setEducation}
               />
 
               <Experience
@@ -96,13 +102,10 @@ function App() {
                 email={email}
                 number={number}
                 summary={summary}
-                schoolName={schoolName}
-                degree={degree}
-                fullDate={fullDate}
+                educationData={education} 
                 position={position}
                 company={company}
                 description={description}
-                fullJobDate={fullJobDate}
                 link={link}
               />
             </div>

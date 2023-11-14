@@ -7,9 +7,10 @@ const CVPreview = ({
   number,
   link,
   summary,
-  schoolName,
-  degree,
-  fullDate,
+  educationData,
+  // schoolName,
+  // degree,
+  // fullDate,
   company,
   position,
   description,
@@ -85,12 +86,16 @@ const CVPreview = ({
         Education
       </h1>
 
-      <div className="flex flex-col">
-        <div className="flex flex-wrap justify-between pt-1 md:flex">
-          <h2 className="font-poppins">{schoolName}</h2>
-          <h2 className="font-poppins justify-end">{fullDate}</h2>
-        </div>
-        <h2 className="font-poppins italic text-gray-800">{degree}</h2>
+      <div>
+        {educationData.map((educations, index) => (
+          <div key={index} className="flex flex-col mt-2">
+            <div className="flex justify-between">
+              <h2 className="font-poppins">{educations.schoolName}</h2>
+              <h2 className="font-poppins justify-end">{`${educations.startDate} - ${educations.endDate}`}</h2>
+            </div>
+            <h2 className="font-poppins italic text-gray-800">{educations.degree}</h2>
+          </div>
+        ))}
       </div>
 
       <h1 className="mt-5 text-2xl font-bold border-b-2 border-black">
