@@ -9,13 +9,8 @@ const CVPreview = ({
   summary,
   educationData,
   experienceData,
-  // schoolName,
-  // degree,
-  // fullDate,
-  // company,
-  // position,
-  // descriptions,
-  // fullJobDate,
+  skillData
+
 }) => {
   return (
     <>
@@ -98,6 +93,24 @@ const CVPreview = ({
           </div>
         ))}
       </div>
+
+
+      <h1 className="mt-5 text-2xl font-bold border-b-2 border-black">
+        Technical Sills
+      </h1>
+
+      <div className="flex gap-4">
+        {skillData.map((skills, index) => (
+          <div key={index} className="flex flex-row  mt-2">
+            <h2 className="font-poppins">{skills.techSkill}</h2>
+          </div>
+        ))}
+      </div>
+
+
+
+
+
 
       <h1 className="mt-5 text-2xl font-bold border-b-2 border-black">
         Experience

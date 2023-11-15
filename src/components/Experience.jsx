@@ -109,7 +109,7 @@ const Experience = ({ experience, setExperience }) => {
                 <button
                   type="button"
                   onClick={handleNewDesc}
-                  className="flex rounded border border-indigo-600 bg-indigo-600 px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-indigo-600 focus:outline-none focus:ring active:text-indigo-500"
+                  className="flex rounded border border-indigo-600 bg-indigo-600 px-4 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-indigo-600 focus:outline-none focus:ring active:text-indigo-500"
                 >
                   Add Description
                 </button>
@@ -119,7 +119,7 @@ const Experience = ({ experience, setExperience }) => {
 
           <div
             onClick={addForm}
-            className="flex items-center justify-center w-10 h-10 text-white transition-colors mt-3 duration-150 bg-red-500 rounded-full focus:shadow-outline hover:bg-red-700"
+            className="flex items-center justify-center w-10 h-10 text-white transition-colors mt-8 mb-4 duration-150 bg-red-500 rounded-full focus:shadow-outline hover:bg-red-700"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
