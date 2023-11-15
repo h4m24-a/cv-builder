@@ -36,15 +36,42 @@ function App() {
 
 
   // Experience
-  const [company, setCompany] = useState("Web Agency");
-  const [position, setPosition] = useState("Junior Software Developer");
-  const [jobStart, setJobStart] = useState("Feb. 2023");
-  const [jobEnd, setJobEnd] = useState("Present");
-  const [description, setDescriptions] = useState([
-    "Led a team of five developers, implementing agile methodologies and ensuring on-time project delivery.",
-    "Worked closely with product management and UX/UI teams to integrate frontend and backend components seamlessly.",
-    "Provided mentorship to junior developers, fostering a culture of continuous learning and improvement."
+  const [experience, setExperience] = useState([
+    {
+      id: 1,
+      company: 'Web Agency',
+      position: 'Junior Software Developer',
+      jobStart: 'September. 2014',
+      jobEnd: 'June 2017',
+      descriptions: [
+        'Work with senior developers to implement and maintain client-side and server-side code.',
+        'Troubleshoot and debug issues in existing code and contribute to finding effective solutions.',
+        'Write clean, well-documented code in languages such as HTML, CSS and JavaScript',
+        'Participate in code reviews to improve coding skills and understanding of project requirements.'
+      ],
+    },
+    {
+      id: 2,
+      company: 'HFT',
+      position: 'Software Developer',
+      jobStart: 'July. 2017',
+      jobEnd: 'Present',
+      descriptions: [
+        'Drive innovation through research, proposing new algorithms, and staying abreast of cutting-edge technologies.',
+        'Collaborate with cross-functional teams, including traders and risk management, to align technology with business objectives.',
+        'Lead and manage projects, ensuring timely delivery and effective communication between technical and non-technical stakeholders',
+      ],
+    },
   ]);
+
+  const [description, setDescriptions] = useState([
+
+  ]);
+
+  // const [company, setCompany] = useState("Web Agency");
+  // const [position, setPosition] = useState("Junior Software Developer");
+  // const [jobStart, setJobStart] = useState("Feb. 2023");
+  // const [jobEnd, setJobEnd] = useState("Present");
 
 
 
@@ -80,16 +107,20 @@ function App() {
               />
 
               <Experience
-                company={company}
-                setCompany={setCompany}
-                position={position}
-                setPosition={setPosition}
-                jobStart={jobStart}
-                setJobStart={setJobStart}
-                jobEnd={jobEnd}
-                setJobEnd={setJobEnd}
-                description={description}
-                setDescriptions={setDescriptions}
+              experience={experience}
+              setExperience={setExperience}
+              setDescriptions={setDescriptions}
+              description={description}
+              
+                // company={company}
+                // setCompany={setCompany}
+                // position={position}
+                // setPosition={setPosition}
+                // jobStart={jobStart}
+                // setJobStart={setJobStart}
+                // jobEnd={jobEnd}
+                // setJobEnd={setJobEnd}
+                // setDescriptions={setDescriptions}
               />
             </div>
           </div>
@@ -101,12 +132,15 @@ function App() {
                 fullName={fullName}
                 email={email}
                 number={number}
+                link={link}
                 summary={summary}
                 educationData={education} 
-                position={position}
-                company={company}
+                experienceData={experience}
+                setExperience={setExperience}
+                setDescriptions={setDescriptions}
                 description={description}
-                link={link}
+                // position={position}
+                // company={company}
               />
             </div>
           </div>

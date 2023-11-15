@@ -8,18 +8,19 @@ const CVPreview = ({
   link,
   summary,
   educationData,
+  experienceData,
   // schoolName,
   // degree,
   // fullDate,
-  company,
-  position,
-  description,
-  fullJobDate,
+  // company,
+  // position,
+  // descriptions,
+  // fullJobDate,
 }) => {
   return (
     <>
       <div>
-        <h1 className=" text-4xl text-center font-bold font-cambo">
+        <h1 className="text-4xl text-center font-bold font-cambo">
           {fullName}
         </h1>
 
@@ -90,7 +91,7 @@ const CVPreview = ({
         {educationData.map((educations, index) => (
           <div key={index} className="flex flex-col mt-2">
             <div className="flex justify-between">
-              <h2 className="font-poppins">{educations.schoolName}</h2>
+              <h2 className="font-poppins font-semibold">{educations.schoolName}</h2>
               <h2 className="font-poppins justify-end">{`${educations.startDate} - ${educations.endDate}`}</h2>
             </div>
             <h2 className="font-poppins italic text-gray-800">{educations.degree}</h2>
@@ -102,25 +103,25 @@ const CVPreview = ({
         Experience
       </h1>
 
-      <div>
-        <div className="flex flex-col">
-          <h2 className="font-poppins font-semibold pt-1 ">{company}</h2>
-          <div className="flex justify-between">
-            <h2 className="font-poppins italic text-gray-800">{position}</h2>
-            <h2 className="font-poppins">{fullJobDate}</h2>
-          </div>
-        </div>
+ <div>
+        {experienceData.map((experience, index) => (
+          <div key={index} className="flex flex-col mt-4">
+            <div className="flex justify-between">
+              <h2 className="font-poppins font-semibold pt-0 ">{experience.company}</h2>
+              <h2 className="font-poppins justify-end">{`${experience.jobStart} - ${experience.jobEnd}`}</h2>
+            </div>
+            <h2 className="font-poppins italic text-gray-800">{experience.position}</h2>
 
-        <h2 className="font-poppins mt-4">
-          <ul className="pl-5">
-            {description.map((descriptions, index) => (
-              <li className="list-disc pb-2" key={index}>
-                {descriptions}
-              </li>
-            ))}
-          </ul>
-        </h2>
-      </div>
+            <ul className="pl-5">
+              {experience.descriptions.map((description, index) => (
+                <li className="font-poppins list-disc pb-2" key={index}>
+                  {description}
+                </li>
+              ))}
+            </ul>
+          </div>
+  ))}
+</div>
     </>
   );
 };
