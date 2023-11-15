@@ -79,9 +79,26 @@ function App() {
     },
     {
       id: 3,
-      techSkill: "JavaScript",
+      techSkill: "Node",
+    },
+    {
+      id: 4,
+      techSkill: "Python",
+    },
+    {
+      id: 5,
+      techSkill: "Django",
+    },
+    {
+      id: 6,
+      techSkill: "PHP",
+    },
+    {
+      id: 7,
+      techSkill: "Laravel",
     },
   ]);
+
 
   return (
     <>
@@ -109,9 +126,15 @@ function App() {
                 setSummary={setSummary}
               />
 
-              <Education education={education} setEducation={setEducation} />
+              <Education 
+                education={education} 
+                setEducation={setEducation} 
+              />
 
-              <Skills skill={skill} setSkill={setSkill} />
+              <Skills 
+                skill={skill} 
+                setSkill={setSkill} 
+              />
 
               <Experience
                 experience={experience}

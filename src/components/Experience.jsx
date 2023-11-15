@@ -87,7 +87,7 @@ const Experience = ({ experience, setExperience }) => {
                 placeholder="May 2023"
               />
 
-              <div className="w-full px-4 flex flex-col justify-center">
+              <div className="w-full px-60 flex flex-col justify-center">
                 <label
                   htmlFor={`description-${experiences.id}`}
                   className="flex justify-center pt-3 text-md font-medium leading-6 text-gray-900"
@@ -101,7 +101,7 @@ const Experience = ({ experience, setExperience }) => {
                   value={description}
                   name="description"
                   placeholder="Enter description"
-                  className="mx-ai rounded-md border-0 py-2 pl-7 pr-28 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 h-32"
+                  className=" rounded-md border-0 py-2 pl-7 pr-28 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600  sm:leading-6 h-32"
                 />
               </div>
 

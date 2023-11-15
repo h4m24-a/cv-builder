@@ -28,11 +28,10 @@ const Skills = ({ skill, setSkill }) => {
       </h1>
 
       <div className="flex  justify-center">
-        <form className="flex  flex-wrap justify-center">
+      <form className="flex flex-col justify-center md:flex-row md:flex-wrap">
           {skill.map((skills, index) => (
             <div key={index} className="flex  justify-center lg:flex ">
               <InputField
-                label="Skill"
                 id={`techSkill-${skills.id}`}
                 value={skills.techSkill}
                 onChange={(e) => handleInputValue(index, "techSkill", e.target.value)}
@@ -41,8 +40,10 @@ const Skills = ({ skill, setSkill }) => {
             </div>
           ))}
 
+        </form>
+      </div>
           <div
-            className="flex items-center justify-center w-10 h-10 text-white transition-colors  duration-150 bg-red-500 rounded-full focus:shadow-outline hover:bg-red-700"
+            className="flex items-center mx-auto justify-center w-10 h-10 text-white transition-colors  duration-150 bg-red-500 rounded-full focus:shadow-outline hover:bg-red-700"
             onClick={addForm}
           >
             <svg
@@ -60,8 +61,6 @@ const Skills = ({ skill, setSkill }) => {
               />
             </svg>
           </div>
-        </form>
-      </div>
     </>
   );
 };

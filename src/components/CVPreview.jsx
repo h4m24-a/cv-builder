@@ -99,9 +99,9 @@ const CVPreview = ({
         Technical Sills
       </h1>
 
-      <div className="flex gap-4">
+      <div className="flex gap-3 flex-wrap">
         {skillData.map((skills, index) => (
-          <div key={index} className="flex flex-row  mt-2">
+          <div key={index} className="flex flex-row mt-2">
             <h2 className="font-poppins">{skills.techSkill}</h2>
           </div>
         ))}
