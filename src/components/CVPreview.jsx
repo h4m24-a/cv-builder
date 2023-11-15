@@ -106,11 +106,11 @@ const CVPreview = ({
  <div>
         {experienceData.map((experience, index) => (
           <div key={index} className="flex flex-col mt-4">
-            <div className="flex justify-between">
+            <div className="flex justify-between flex-wrap">
               <h2 className="font-poppins font-semibold pt-0 ">{experience.company}</h2>
               <h2 className="font-poppins justify-end">{`${experience.jobStart} - ${experience.jobEnd}`}</h2>
             </div>
-            <h2 className="font-poppins italic text-gray-800">{experience.position}</h2>
+            <h2 className="font-poppins italic my-2 text-gray-800">{experience.position}</h2>
 
             <ul className="pl-5">
               {experience.descriptions.map((description, index) => (
