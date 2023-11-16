@@ -8,6 +8,10 @@ import Experience from "./components/Experience";
 import Skills from "./components/Skills";
 
 function App() {
+
+
+  const [viewPreview, setViewPreview] = useState(false);
+  
   // Profile
   const [firstName, setFirstName] = useState("John");
   const [lastName, setLastName] = useState("Doe");
@@ -156,8 +160,8 @@ setSkill([
         </h1>
 
 
-        <div className="flex justify-center mt-1">
-            <button type="button" onClick={clearForm} className="inline-flex items-center justify-center h-12 gap-2 px-6 text-md font-medium tracking-wide text-white transition duration-300 rounded focus-visible:outline-none whitespace-nowrap bg-emerald-500 hover:bg-emerald-600 focus:bg-emerald-700 disabled:cursor-not-allowed disabled:border-emerald-300 disabled:bg-emerald-300 disabled:shadow-none">
+        <div className="flex justify-center gap-4 mt-1">
+            <button type="button" onClick={clearForm} className="inline-flex items-center justify-center h-12 gap-2 px-6 text-md font-medium tracking-wide text-slate-700 transition duration-300 rounded focus-visible:outline-none whitespace-nowrap bg-emerald-500 hover:bg-emerald-600 focus:bg-emerald-700 disabled:cursor-not-allowed disabled:border-emerald-300 disabled:bg-emerald-300 disabled:shadow-none">
               <span>Clear Form</span>
               <span className="relative only:-mx-6">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
@@ -165,11 +169,19 @@ setSkill([
               </svg>
               </span>
             </button>
+            <button
+              type="button"
+              onClick={() => setViewPreview(!viewPreview)}
+              className="inline-flex items-center justify-center h-12 gap-2 px-6 text-md font-medium tracking-wide text-white transition duration-300 rounded focus-visible:outline-none whitespace-nowrap bg-emerald-500 hover:bg-emerald-600 focus:bg-emerald-700 disabled:cursor-not-allowed disabled:border-emerald-300 disabled:bg-emerald-300 disabled:shadow-none"
+            >
+              {viewPreview ? 'Edit' : 'Preview'}
+            </button>
         </div>
         
 
         <div className="h-screen sm: flex flex-col lg:flex-row ">
           {/* Left Page */}
+          {viewPreview ? null : (
           <div id="editor" className=" flex-1 bg-white p-8 text-sm">
             <div className="shadow-2xl  rounded-md border border-black ">
               <Profile
@@ -205,6 +217,7 @@ setSkill([
               />
             </div>
           </div>
+          )}
 
           {/* Right Page */}
           <div id="cvPreview" className=" flex-1  bg-white p-8">
