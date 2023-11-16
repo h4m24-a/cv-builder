@@ -135,6 +135,13 @@ setExperience([
 ]);
 
 
+setSkill([
+  {
+    id: 1,
+    techSkill: '',
+  }
+ 
+]);
 
 
 
