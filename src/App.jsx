@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unknown-property */
 import React from "react";
 import { useState } from "react";
 import Profile from "./components/Profile";
@@ -9,7 +10,7 @@ import Skills from "./components/Skills";
 function App() {
   // Profile
   const [firstName, setFirstName] = useState("John");
-  const [lastName, setlastName] = useState("Doe");
+  const [lastName, setLastName] = useState("Doe");
   const fullName = firstName + " " + lastName;
   const [email, setEmail] = useState("johndoe@gmail.com");
   const [number, setNumber] = useState("0123456789");
@@ -51,21 +52,23 @@ function App() {
         "Participate in code reviews to improve coding skills and understanding of project requirements.",
       ],
     },
-    {
-      id: 2,
-      company: "HFT",
-      position: "Software Developer",
-      jobStart: "July 2017",
-      jobEnd: "Present",
-      descriptions: [
-        "Drive innovation through research, proposing new algorithms, and staying abreast of cutting-edge technologies.",
-        "Collaborate with cross-functional teams, including traders and risk management, to align technology with business objectives.",
-        "Lead and manage projects, ensuring timely delivery and effective communication between technical and non-technical stakeholders",
-      ],
-    },
+    // {
+    //   id: 2,
+    //   company: "HFT",
+    //   position: "Software Developer",
+    //   jobStart: "July 2017",
+    //   jobEnd: "Present",
+    //   descriptions: [
+    //     "Drive innovation through research, proposing new algorithms, and staying abreast of cutting-edge technologies.",
+    //     "Collaborate with cross-functional teams, including traders and risk management, to align technology with business objectives.",
+    //     "Lead and manage projects, ensuring timely delivery and effective communication between technical and non-technical stakeholders",
+    //   ],
+    // },
   ]);
 
-  const [description, setDescriptions] = useState([]);
+  const [description, setDescriptions] = useState([
+    
+  ]);
 
   // Technical Skills
   const [skill, setSkill] = useState([
@@ -99,6 +102,44 @@ function App() {
     },
   ]);
 
+  
+const clearForm = () => {
+  setFirstName('');
+  setLastName('');
+  setEmail('');
+  setNumber('');
+  setLink('');
+  setSummary('');
+
+    
+setEducation([
+  {
+    id: 1,
+    schoolName: '',
+    degree: '',
+    startDate: '',
+    endDate: '',
+  },
+]);
+
+
+setExperience([
+  {
+    id: 1,
+    company: '',
+    position: '',
+    jobStart: '',
+    jobEnd: '',
+    descriptions: [],
+  },
+]);
+
+
+
+
+
+};
+
 
   return (
     <>
@@ -106,6 +147,19 @@ function App() {
         <h1 className=" bg-black text-white text-4xl font-bold font-mono text-center p-3">
           CV Builder
         </h1>
+
+
+        <div className="flex justify-center mt-1">
+            <button type="button" onClick={clearForm} className="inline-flex items-center justify-center h-12 gap-2 px-6 text-md font-medium tracking-wide text-white transition duration-300 rounded focus-visible:outline-none whitespace-nowrap bg-emerald-500 hover:bg-emerald-600 focus:bg-emerald-700 disabled:cursor-not-allowed disabled:border-emerald-300 disabled:bg-emerald-300 disabled:shadow-none">
+              <span>Clear Form</span>
+              <span className="relative only:-mx-6">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+              <path fill-rule="evenodd" d="M16.5 4.478v.227a48.816 48.816 0 013.878.512.75.75 0 11-.256 1.478l-.209-.035-1.005 13.07a3 3 0 01-2.991 2.77H8.084a3 3 0 01-2.991-2.77L4.087 6.66l-.209.035a.75.75 0 01-.256-1.478A48.567 48.567 0 017.5 4.705v-.227c0-1.564 1.213-2.9 2.816-2.951a52.662 52.662 0 013.369 0c1.603.051 2.815 1.387 2.815 2.951zm-6.136-1.452a51.196 51.196 0 013.273 0C14.39 3.05 15 3.684 15 4.478v.113a49.488 49.488 0 00-6 0v-.113c0-.794.609-1.428 1.364-1.452zm-.355 5.945a.75.75 0 10-1.5.058l.347 9a.75.75 0 101.499-.058l-.346-9zm5.48.058a.75.75 0 10-1.498-.058l-.347 9a.75.75 0 001.5.058l.345-9z" clip-rule="evenodd" />
+              </svg>
+              </span>
+            </button>
+        </div>
+        
 
         <div className="h-screen sm: flex flex-col lg:flex-row ">
           {/* Left Page */}
@@ -115,7 +169,7 @@ function App() {
                 firstName={firstName}
                 setFirstName={setFirstName}
                 lastName={lastName}
-                setlastName={setlastName}
+                setLastName={setLastName}
                 email={email}
                 setEmail={setEmail}
                 number={number}
@@ -156,7 +210,6 @@ function App() {
                 summary={summary}
                 educationData={education}
                 experienceData={experience}
-                setExperience={setExperience}
                 setDescriptions={setDescriptions}
                 description={description}
                 skillData={skill}

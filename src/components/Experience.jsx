@@ -29,20 +29,20 @@ const Experience = ({ experience, setExperience }) => {
 
   const [description, setDescription] = useState('');
 
-  const handleNewDesc = () => {
-    if (description.trim() !== '') {
-      setExperience((prevState) => [
-        ...prevState.slice(0, prevState.length - 1),
-        {
-          ...prevState[prevState.length - 1],
-          descriptions: [...prevState[prevState.length - 1].descriptions, description],
-        },
-      ]);
-      setDescription('');
-    }
-  };
+ const handleNewDesc = () => {
+  if (description.trim() !== '') {
+    setExperience((prevState) => [
+      ...prevState.slice(0, prevState.length - 1), // Exclude the last item
+      {
+        ...prevState[prevState.length - 1],
+        descriptions: [...prevState[prevState.length - 1].descriptions, description],
+      },
+    ]);
+    setDescription('');
+  }
+};
   
-  
+  console.log(description)
 
   return (
     <>
@@ -87,7 +87,7 @@ const Experience = ({ experience, setExperience }) => {
                 placeholder="May 2023"
               />
 
-              <div className="w-full px-60 flex flex-col justify-center">
+              <div className="w-full px-4 flex flex-col justify-center">
                 <label
                   htmlFor={`description-${experiences.id}`}
                   className="flex justify-center pt-3 text-md font-medium leading-6 text-gray-900"
@@ -101,7 +101,7 @@ const Experience = ({ experience, setExperience }) => {
                   value={description}
                   name="description"
                   placeholder="Enter description"
-                  className=" rounded-md border-0 py-2 pl-7 pr-28 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600  sm:leading-6 h-32"
+                  className="mx-ai rounded-md border-0 py-2 pl-7 pr-28 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 h-32"
                 />
               </div>
 
@@ -109,7 +109,7 @@ const Experience = ({ experience, setExperience }) => {
                 <button
                   type="button"
                   onClick={handleNewDesc}
-                  className="flex rounded border border-indigo-600 bg-indigo-600 px-4 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-indigo-600 focus:outline-none focus:ring active:text-indigo-500"
+                  className="flex rounded border border-indigo-600 bg-indigo-600 px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-indigo-600 focus:outline-none focus:ring active:text-indigo-500"
                 >
                   Add Description
                 </button>
@@ -119,7 +119,7 @@ const Experience = ({ experience, setExperience }) => {
 
           <div
             onClick={addForm}
-            className="flex items-center justify-center w-10 h-10 text-white transition-colors mt-8 mb-4 duration-150 bg-red-500 rounded-full focus:shadow-outline hover:bg-red-700"
+            className="flex items-center justify-center w-10 h-10 mb-4 text-white transition-colors mt-3 duration-150 bg-red-500 rounded-full focus:shadow-outline hover:bg-red-700"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

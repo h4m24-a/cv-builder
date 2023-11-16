@@ -10,7 +10,7 @@ const InputField = ({ label, id, value, onChange, type }) => (
       name={id}
       id={id}
       type={type}
-      className="bg-slate-200 font-roboto rounded-md border-0 py-2 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600"
+      className="bg-slate-200 font-roboto rounded-md border-0 py-2 px-5 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600"
     />
   </div>
 );

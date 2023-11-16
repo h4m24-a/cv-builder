@@ -28,7 +28,7 @@ const Skills = ({ skill, setSkill }) => {
       </h1>
 
       <div className="flex  justify-center">
-      <form className="flex flex-col justify-center md:flex-row md:flex-wrap">
+      <form className="flex flex-wrap justify-center md:flex-wrap">
           {skill.map((skills, index) => (
             <div key={index} className="flex  justify-center lg:flex ">
               <InputField

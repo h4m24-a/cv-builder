@@ -27,7 +27,7 @@ export default function Profile({
       </h1>
 
       <div className="flex justify-center">
-        <form onSubmit={handleSumbit} className="flex flex-wrap justify-center">
+        <form onSubmit={handleSumbit} className="flex flex-wrap justify-center w-full">
           <InputField
             label="First Name"
             id="firstName"
