@@ -1,5 +1,7 @@
 # CV Builder
 
+### View Project : https://h4m24-a-cv-builder.netlify.app/
+
 - Vite 
 - React
 - Tailwind
