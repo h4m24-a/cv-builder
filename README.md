@@ -1,8 +1,34 @@
-# React + Vite
+# CV Builder
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- Vite 
+- React
+- Tailwind
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+
+- Build a CV without worrying about the format.
+-	Utilized Tailwind CSS for styling, ensuring a responsive and visually appealing user interface.
+- Users can see the changes in real-time on a preview page, providing immediate feedback as they input information.
+- Designed the preview page to mirror the layout of a CV.
+
+
+
+## Install project dependencies
+
+
+
+```
+  npm install
+```
+
+
+## Running development server
+```
+ npm run dev
+```
+
+## Building for production
+```
+ npm run build
+```
